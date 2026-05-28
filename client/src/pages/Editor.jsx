@@ -39,9 +39,9 @@ const [title, setTitle] = useState("")
 
       try {
 
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/documents/${id}`
-        )
+        const response = await axios.post(
+  `${import.meta.env.VITE_API_URL}/documents/create`
+)
 
         setTitle(response.data.title)
 setContent(response.data.content)

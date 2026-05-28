@@ -9,9 +9,9 @@ function Home() {
 
     try {
 
-      const response = await axios.post(
-       `${import.meta.env.VITE_API_URL}/documents/create`
-      )
+      const response = await axios.get(
+  `${import.meta.env.VITE_API_URL}/documents/${id}`
+)
 
       const documentId = response.data._id
 

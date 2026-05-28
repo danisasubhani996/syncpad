@@ -39,8 +39,8 @@ const [title, setTitle] = useState("")
 
       try {
 
-        const response = await axios.post(
-  `${import.meta.env.VITE_API_URL}/documents/create`
+       const response = await axios.get(
+  `${import.meta.env.VITE_API_URL}/documents/${id}`
 )
 
         setTitle(response.data.title)
@@ -111,7 +111,7 @@ useEffect(() => {
     try {
 
       await axios.put(
-        `http://localhost:5000/documents/${id}`,
+        `${import.meta.env.VITE_API_URL}/documents/${id}`,
        {
   title,
   content
